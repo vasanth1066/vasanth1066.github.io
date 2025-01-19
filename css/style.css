@@ -359,6 +359,7 @@ body.no-scroll {
   width: 100%;
   height: auto;
   border: 1px solid rgb(62, 62, 62);
+  border-radius: 11px;
   outline: none;
   box-sizing: border-box;
   padding: 10px;
@@ -450,3 +451,11 @@ body.no-scroll {
 @media print {
   /* CSS styles for print */
 }
+
+
+/* CSS for Background Color Changes */
+body {
+  background: linear-gradient(135deg, #f0f3f5, #ffffff);  /* Light blue to lighter blue gradient */
+  /* padding: 50px 0; */
+}
+

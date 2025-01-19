@@ -52,57 +52,6 @@ backdrop.addEventListener("click", closeNav);
 
 // end 
 
-// education div dynamic start
-
-const educationData = [
-    {
-      period: "2019 - 2021",
-      degree: "Msc Computer Science",
-      institution: "Thiruvalluvar Govt Arts College, Rasipuram",
-      result: "79% - First Class Distinction With D Grade",
-    },
-    {
-      period: "2016 - 2019",
-      degree: "Bsc Computer Science",
-      institution: "Thiruvalluvar Govt Arts College, Rasipuram",
-      result: "66% - First Class With A+ Grade",
-    },
-    {
-      period: "2015 - 2016",
-      degree: "12th Grade",
-      institution: "Govt Boys Hr Sec School, Tiruchengode",
-      result: "64%",
-    },
-    {
-      period: "2013 - 2014",
-      degree: "10th Grade",
-      institution: "SPB High School, SPB Colony",
-      result: "69%",
-    },
-  ];
-  
-  // Function to create and append education cards
-  function appendEducationSection() {
-    const container = document.getElementById('education-section').querySelector('.d-flex');
-  
-    educationData.forEach(item => {
-      const card = document.createElement('div');
-      card.className = 'col-12 col-sm-12 col-md-10 col-lg-6 border p-4 mb-4';
-  
-      card.innerHTML = `
-        <p><span class="badge theme-bg-color">${item.period}</span></p>
-        <h3>${item.degree}</h3>
-        <h5>${item.institution}</h5>
-        <p>${item.result}</p>
-      `;
-  
-      container.appendChild(card);
-    });
-  }
-  
-  appendEducationSection();
-
-//   education div dynamic end
 
 // skills dynamic div start
 
@@ -110,17 +59,13 @@ const skillsData = [
     { name: "HTML", image: "images/skills/html.svg", proficiency: 90 },
     { name: "CSS", image: "images/skills/css.svg", proficiency: 85 },
     { name: "JAVASCRIPT", image: "images/skills/javascript.svg", proficiency: 80 },
-    { name: "JQUERY", image: "images/skills/jquery.svg", proficiency: 80 },
     { name: "BOOTSTRAP", image: "images/skills/bootstrap.svg", proficiency: 90 },
-    { name: "ANGULAR", image: "images/skills/angular.svg", proficiency: 85 },
-    { name: "REACT", image: "images/skills/react.svg", proficiency: 30 },
-    { name: "IONIC", image: "images/skills/ionic.svg", proficiency: 75 },
-    { name: "PHP", image: "images/skills/php.svg", proficiency: 80 },
-    { name: "LARAVEL", image: "images/skills/laravel.svg", proficiency: 85 },
+    { name: "MUI", image: "images/skills/material-ui.svg", proficiency: 90 },
+    { name: "REACT", image: "images/skills/react.svg", proficiency: 90 },
+    { name: "REDUX", image: "images/skills/redux.svg", proficiency: 90 }, 
     { name: "NODE JS", image: "images/skills/node-js.svg", proficiency: 30 },
-    { name: "EXPRESS JS", image: "images/skills/express.svg", proficiency: 30 },
     { name: "MY SQL", image: "images/skills/mysql.svg", proficiency: 80 },
-    { name: "MS SQL", image: "images/skills/microsoftsqlserver.svg", proficiency: 60 },
+    { name: "JAVA", image: "images/skills/java.svg", proficiency: 70 },
     { name: "MONGO DB", image: "images/skills/mongo.svg", proficiency: 30 },
   ];
   
@@ -158,7 +103,6 @@ const skillsData = [
 
   const whatidoData = [
     {name: 'Web Development', image: 'images/web_dev.svg', desc: 'Web development involves creating and maintaining websites, ensuring they are user-friendly and visually appealing. It combines coding, design, and problem-solving skills to deliver an engaging online experience.'},
-    {name: 'App Development', image: 'images/app_dev.svg', desc: 'App development is the process of creating software applications for mobile devices or desktops, focusing on functionality and user experience. It encompasses design, coding, testing, and deployment.'},
     {name: 'Ui Development', image: 'images/ui_dev.svg', desc: 'Ui development focuses on designing and implementing the visual elements of a software application, ensuring an intuitive and engaging user experience. It involves creating layouts, selecting color schemes.'},
     {name: 'Third-Party Integration', image: 'images/game.svg', desc: 'Third-party integration, such as payment gateways, allows applications to securely process transactions and facilitate online payments. This enables businesses to streamline their checkout processes.'}
   ]
@@ -222,3 +166,5 @@ function redirectToEmail(){
 
     window.location.href = mailtoURL;
 }
+
+document.getElementById("current-year").textContent = new Date().getFullYear();
