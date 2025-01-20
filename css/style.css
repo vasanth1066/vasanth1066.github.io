@@ -129,9 +129,11 @@ body.no-scroll {
 
 .theme-bg-color-btn,
 .theme-bg-color-btn:hover {
-  background-color: #F05A7E;
+  background-color: #12192052;
   color: #fff;
+  border-radius: 10px; 
 }
+
 .light-dark{
   color: #ffffffa6;
 }
@@ -353,109 +355,203 @@ body.no-scroll {
   width: 30px;
   text-align: center;
 }
-
 /* form */
 .inputf {
   width: 100%;
-  height: auto;
-  border: 1px solid rgb(62, 62, 62);
-  border-radius: 11px;
+  height: 40px;  /* Increased height for a more spacious input field */
+  border: 2px solid #3498db;  /* Blue border */
+  border-radius: 15px;  /* Rounded corners */
   outline: none;
   box-sizing: border-box;
-  padding: 10px;
-  position: relative;
-  z-index: 1;
+  padding: 12px 15px;
+  font-size: 16px;  /* Slightly larger text */
+  color: #333;  /* Darker text for better readability */
+  background-color: #f0f0f0;  /* Light gray background */
+  transition: all 0.3s ease;  /* Smooth transition for focus effect */
 }
+
 .inputf:focus {
-  box-shadow: 5px 5px 0 rgb(62, 62, 62);
+  border-color: #2980b9;  /* Darker blue border on focus */
+  box-shadow: 0 0 8px rgba(41, 128, 185, 0.5);  /* Glowing blue effect */
 }
+
 .label {
   font-size: 14px;
   font-weight: 500;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);  /* Center the label vertically */
   z-index: 0;
-  transition: 0.25s;
-  color: black;
+  transition: 0.3s ease-in-out;
+  color: #7f8c8d;  /* Soft gray color for the label */
+}
 
-}
-.inputf:focus + .label {
-  top: -25px;
-}
+.inputf:focus + .label,
 .inputf:not(:placeholder-shown) + .label {
-  top: -20px;
-}
-.inputf:not(:placeholder-shown) {
-  box-shadow: 5px 5px 0 rgb(62, 62, 62);
+  top: -18px;  /* Label moves up when input is focused or has content */
+  font-size: 12px;  /* Smaller font size when focused */
+  color: #2980b9;  /* Blue color when focused */
 }
 
-/* media queries */
+/* Optional: Add a hover effect to the input */
+.inputf:hover {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(41, 128, 185, 0.3);
+}
+
+/* textarea */
+textarea.inputf {
+  width: 100%;
+  height: 90px;  /* Adjusted height for better spacing */
+  border: 2px solid #3498db;  /* Blue border */
+  border-radius: 15px;  /* Rounded corners */
+  outline: none;
+  box-sizing: border-box;
+  padding: 21px 15px;
+  font-size: 16px;  /* Slightly larger text */
+  color: #333;  /* Darker text for better readability */
+  background-color: #f0f0f0;  /* Light gray background */
+  transition: all 0.3s ease;  /* Smooth transition for focus effect */
+  resize: vertical;  /* Allows the user to resize the textarea vertically */
+}
+
+textarea.inputf:focus {
+  border-color: #2980b9;  /* Darker blue border on focus */
+  box-shadow: 0 0 8px rgba(41, 128, 185, 0.5);  /* Glowing blue effect */
+}
+
+textarea.inputf::placeholder {
+  color: #7f8c8d;  /* Soft gray for the placeholder text */
+}
+
+textarea.inputf:focus + .label,
+textarea.inputf:not(:placeholder-shown) + .label {
+  top: -18px;  /* Label moves up when input is focused or has content */
+  font-size: 12px;  /* Smaller font size when focused */
+  color: #2980b9;  /* Blue color when focused */
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);  /* Center the label vertically */
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+  color: #7f8c8d;  /* Soft gray color for the label */
+}
+
+/* Optional: Add a hover effect to the textarea */
+textarea.inputf:hover {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(41, 128, 185, 0.3);
+}
+
+/* Media Queries */
 
 /* Extra Small Devices (Phones, less than 576px) */
 @media (max-width: 575.98px) {
   .banner-text {
-    font-size: 40px;
+    font-size: 32px; /* Slightly smaller text for phones */
+    line-height: 1.2;
+    text-align: center;
   }
 
   .banner-sub-text {
-    font-size: 30px;
+    font-size: 22px; /* Slightly smaller sub-text */
+    line-height: 1.3;
+    text-align: center;
+    margin-top: 10px; /* Space between title and subtitle */
   }
+  
 }
 
 /* Small Devices (Tablets, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .banner-text {
-    font-size: 50px;
+    font-size: 42px;
+    line-height: 1.3;
+    text-align: center;
   }
 
   .banner-sub-text {
-    font-size: 40px;
+    font-size: 30px;
+    line-height: 1.4;
+    text-align: center;
+    margin-top: 15px;
   }
 }
 
 /* Medium Devices (Desktops, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .banner-text {
-    font-size: 60px;
+    font-size: 50px;
+    line-height: 1.4;
+    text-align: center;
   }
 
   .banner-sub-text {
-    font-size: 50px;
+    font-size: 40px;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 20px;
   }
 }
 
 /* Large Devices (Desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .banner-text {
-    font-size: 70px;
+    font-size: 60px;
+    line-height: 1.5;
+    text-align: center;
   }
 
   .banner-sub-text {
-    font-size: 60px;
+    font-size: 50px;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 25px;
   }
 }
 
 /* Extra Large Devices (Desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .banner-text {
-    font-size: 80px;
+    font-size: 70px;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff; /* Dark color for contrast */
   }
 
   .banner-sub-text {
-    font-size: 70px;
+    font-size: 60px;
+    line-height: 1.7;
+    text-align: center;
+    margin-top: 30px;
+    color: #777; /* Lighter color for sub-text */
   }
 }
 
 /* Print Styles */
 @media print {
   /* CSS styles for print */
+  .banner-text,
+  .banner-sub-text {
+    font-size: 16px; /* Smaller text size for print */
+    line-height: 1.2;
+    text-align: left;
+  }
 }
-
 
 /* CSS for Background Color Changes */
 body {
-  background: linear-gradient(135deg, #f0f3f5, #ffffff);  /* Light blue to lighter blue gradient */
-  /* padding: 50px 0; */
+  background: linear-gradient(135deg, #000000, #2c3e50, #3498db);  /* Black to blue gradient */
+  color: #ffffff; 
 }
+
+
 

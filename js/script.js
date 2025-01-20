@@ -63,10 +63,10 @@ const skillsData = [
     { name: "MUI", image: "images/skills/material-ui.svg", proficiency: 90 },
     { name: "REACT", image: "images/skills/react.svg", proficiency: 90 },
     { name: "REDUX", image: "images/skills/redux.svg", proficiency: 90 }, 
-    { name: "NODE JS", image: "images/skills/node-js.svg", proficiency: 30 },
+    { name: "NODE JS", image: "images/skills/node-js.svg", proficiency: 60 },
     { name: "MY SQL", image: "images/skills/mysql.svg", proficiency: 80 },
     { name: "JAVA", image: "images/skills/java.svg", proficiency: 70 },
-    { name: "MONGO DB", image: "images/skills/mongo.svg", proficiency: 30 },
+    { name: "MONGO DB", image: "images/skills/mongo.svg", proficiency: 60 },
   ];
   
   function appendSkillsSection() {
@@ -162,7 +162,7 @@ function redirectToEmail(){
 
     const emailSubject = 'Contact Form Submission';
     const emailBody = `Name: ${encodedName}%0AEmail: ${encodedEmail}%0APhone: ${encodedPhone}%0AMessage: ${encodedMessage}`;
-    const mailtoURL = `mailto:sutharsanan100@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${emailBody}`;
+    const mailtoURL = `mailto:vasanth61066@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${emailBody}`;
 
     window.location.href = mailtoURL;
 }
